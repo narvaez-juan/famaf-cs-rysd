@@ -1,0 +1,3085 @@
+{
+	"info": {
+		"_postman_id": "39fd27ab-1494-42f1-b9ec-a11018590f9c",
+		"name": "Lab1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14633840",
+		"_collection_link": "https://lively-eclipse-864247.postman.co/workspace/RySD~58c32f24-5847-4262-94b3-9e30469c9023/collection/14633840-39fd27ab-1494-42f1-b9ec-a11018590f9c?action=share&source=collection_link&creator=14633840"
+	},
+	"item": [
+		{
+			"name": "Valen",
+			"item": [
+				{
+					"name": "Movies",
+					"item": [
+						{
+							"name": "Todas las peliculas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas"
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Todas",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 20 Mar 2025 02:34:51 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "999"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"genero\": \"Acción\",\n        \"id\": 1,\n        \"titulo\": \"Indiana Jones\"\n    },\n    {\n        \"genero\": \"Acción\",\n        \"id\": 2,\n        \"titulo\": \"Star Wars\"\n    },\n    {\n        \"genero\": \"Ciencia ficción\",\n        \"id\": 3,\n        \"titulo\": \"Interstellar\"\n    },\n    {\n        \"genero\": \"Aventura\",\n        \"id\": 4,\n        \"titulo\": \"Jurassic Park\"\n    },\n    {\n        \"genero\": \"Acción\",\n        \"id\": 5,\n        \"titulo\": \"The Avengers\"\n    },\n    {\n        \"genero\": \"Ciencia ficción\",\n        \"id\": 6,\n        \"titulo\": \"Back to the Future\"\n    },\n    {\n        \"genero\": \"Fantasía\",\n        \"id\": 7,\n        \"titulo\": \"The Lord of the Rings\"\n    },\n    {\n        \"genero\": \"Acción\",\n        \"id\": 8,\n        \"titulo\": \"The Dark Knight\"\n    },\n    {\n        \"genero\": \"Ciencia ficción\",\n        \"id\": 9,\n        \"titulo\": \"Inception\"\n    },\n    {\n        \"genero\": \"Drama\",\n        \"id\": 10,\n        \"titulo\": \"The Shawshank Redemption\"\n    },\n    {\n        \"genero\": \"Crimen\",\n        \"id\": 11,\n        \"titulo\": \"Pulp Fiction\"\n    },\n    {\n        \"genero\": \"Drama\",\n        \"id\": 12,\n        \"titulo\": \"Fight Club\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Peliculas Aventura",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas?genero=Aventura",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas"
+									],
+									"query": [
+										{
+											"key": "genero",
+											"value": "Aventura"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": []
+						},
+						{
+							"name": "Peliculas Search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas?search=Indiana",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Indiana"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": []
+						},
+						{
+							"name": "Peliculas Search Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas?search=Interstellar",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Interstellar"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": []
+						},
+						{
+							"name": "Peliculas ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas?id=15",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "15"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": []
+						},
+						{
+							"name": "Peliculas Search Copy 2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas?search=Harry",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Harry"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar una pelicula",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\",\n    \"genero\": \"Acción\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas"
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Agregar pelicula",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\",\n    \"genero\": \"Acción\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas"
+											]
+										}
+									},
+									"status": "CREATED",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 20 Mar 2025 02:41:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "78"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"genero\": \"Acción\",\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Actualizar pelicula",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"titulo\": \"Ejemplo para Postman\",\n    \"genero\": \"Drama\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas/1",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas",
+										"1"
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener pelicula by ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas/1",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas",
+										"1"
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "No implementada",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas/1",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 20 Mar 2025 02:39:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "63"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"response\": \"Esta funcionalidad no esta implementada :(\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Eliminar pelicula by ID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/peliculas/13",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"peliculas",
+										"13"
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "No implementada",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas/1",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 20 Mar 2025 02:39:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "63"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"response\": \"Esta funcionalidad no esta implementada :(\"\n}"
+								},
+								{
+									"name": "Eliminar pelicula by ID",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas/1",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.0.1 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 22 Mar 2025 21:29:04 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"codigo\": 200,\n    \"message\": \"Pelicula eliminada exitosamente\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Holidays",
+					"item": [
+						{
+							"name": "Prox Feriado - One",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriado",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriado"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2024",
+											"disabled": true
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Proximo Feriado - inamovible Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "2024",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 24 Mar 2025 00:28:22 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "175"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"dia\": 24,\n    \"fecha\": \"Lunes 24 de Marzo\",\n    \"mes\": 3,\n    \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n    \"tipo\": \"inamovible\",\n    \"year\": 2025\n}"
+								}
+							]
+						},
+						{
+							"name": "Prox Feriado - One Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/feriado/nolaborable?day=1&month=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"feriado",
+										"nolaborable"
+									],
+									"query": [
+										{
+											"key": "day",
+											"value": "1"
+										},
+										{
+											"key": "month",
+											"value": "1"
+										},
+										{
+											"key": "year",
+											"value": "2024",
+											"disabled": true
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Proximo Feriado - inamovible Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "2024",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 24 Mar 2025 00:28:22 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "175"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"dia\": 24,\n    \"fecha\": \"Lunes 24 de Marzo\",\n    \"mes\": 3,\n    \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n    \"tipo\": \"inamovible\",\n    \"year\": 2025\n}"
+								}
+							]
+						},
+						{
+							"name": "Prox Feriado - Sugerir peli Fecha Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriado_pelicula?type_holiday=inamovible&type_movie=Acción&day=18&month=6",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriado_pelicula"
+									],
+									"query": [
+										{
+											"key": "type_holiday",
+											"value": "inamovible"
+										},
+										{
+											"key": "type_movie",
+											"value": "Acción"
+										},
+										{
+											"key": "day",
+											"value": "18"
+										},
+										{
+											"key": "month",
+											"value": "6"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Prox Feriado - Sugerir peli",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado_pelicula?type_holiday=inamovible&type_movie=Drama",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado_pelicula"
+											],
+											"query": [
+												{
+													"key": "type_holiday",
+													"value": "inamovible"
+												},
+												{
+													"key": "type_movie",
+													"value": "Drama"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.0.1 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 25 Mar 2025 01:20:17 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "426"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"feriado\": {\n        \"año\": 2025,\n        \"dia\": 2,\n        \"fecha\": \"Miércoles 2 de Abril\",\n        \"mes\": 4,\n        \"motivo\": \"Día del Veterano y de los Caídos en la Guerra de Malvinas\",\n        \"tipo\": \"inamovible\"\n    },\n    \"peliculas\": [\n        {\n            \"genero\": \"Drama\",\n            \"id\": 10,\n            \"titulo\": \"The Shawshank Redemption\"\n        },\n        {\n            \"genero\": \"Drama\",\n            \"id\": 12,\n            \"titulo\": \"Fight Club\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Prox Feriado - Sugerir peli Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriado_pelicula?type_holiday=inamovible&type_movie=Teatro",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriado_pelicula"
+									],
+									"query": [
+										{
+											"key": "type_holiday",
+											"value": "inamovible"
+										},
+										{
+											"key": "type_movie",
+											"value": "Teatro"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Prox Feriado - Sugerir peli Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado_pelicula?type_holiday=inamovible&type_movie=Teatro",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado_pelicula"
+											],
+											"query": [
+												{
+													"key": "type_holiday",
+													"value": "inamovible"
+												},
+												{
+													"key": "type_movie",
+													"value": "Teatro"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.0.1 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 25 Mar 2025 01:20:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "287"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"feriado\": {\n        \"año\": 2025,\n        \"dia\": 2,\n        \"fecha\": \"Miércoles 2 de Abril\",\n        \"mes\": 4,\n        \"motivo\": \"Día del Veterano y de los Caídos en la Guerra de Malvinas\",\n        \"tipo\": \"inamovible\"\n    },\n    \"peliculas\": \"No podemos sugerirte una pelicula de Teatro\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Prox Feriado - ALL",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriados",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriados"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2024",
+											"disabled": true
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Proximo Feriado - One Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriados",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriados"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "2024",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 24 Mar 2025 00:28:45 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "3123"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"dia\": 1,\n        \"id\": \"año-nuevo\",\n        \"info\": \"https://es.wikipedia.org/wiki/A%C3%B1o_Nuevo\",\n        \"mes\": 1,\n        \"motivo\": \"Año Nuevo\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 24,\n        \"id\": \"memoria-verdad-justicia\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_Nacional_de_la_Memoria_por_la_Verdad_y_la_Justicia\",\n        \"mes\": 3,\n        \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 2,\n        \"id\": \"veteranos-malvinas\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_del_Veterano_y_de_los_Ca%C3%ADdos_en_la_Guerra_de_Malvinas\",\n        \"mes\": 4,\n        \"motivo\": \"Día del Veterano y de los Caídos en la Guerra de Malvinas\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 1,\n        \"id\": \"trabajador\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores\",\n        \"mes\": 5,\n        \"motivo\": \"Día del Trabajador\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 25,\n        \"id\": \"revolucion-mayo\",\n        \"info\": \"https://es.wikipedia.org/wiki/Revoluci%C3%B3n_de_Mayo\",\n        \"mes\": 5,\n        \"motivo\": \"Día de la Revolución de Mayo\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 17,\n        \"id\": \"martin-guemes\",\n        \"info\": \"https://es.wikipedia.org/wiki/Mart%C3%ADn_Miguel_de_G%C3%BCemes\",\n        \"mes\": 6,\n        \"motivo\": \"Paso a la Inmortalidad del Gral. Don Martín Güemes\",\n        \"original\": \"17-06\",\n        \"tipo\": \"trasladable\"\n    },\n    {\n        \"dia\": 20,\n        \"id\": \"belgrano\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Bandera_(Argentina)\",\n        \"mes\": 6,\n        \"motivo\": \"Paso a la Inmortalidad del General Manuel Belgrano\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 9,\n        \"id\": \"independencia\",\n        \"info\": \"https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_independencia_de_la_Argentina\",\n        \"mes\": 7,\n        \"motivo\": \"Día de la Independencia\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 17,\n        \"id\": \"san-martin\",\n        \"info\": \"https://es.wikipedia.org/wiki/Jos%C3%A9_de_San_Mart%C3%ADn\",\n        \"mes\": 8,\n        \"motivo\": \"Paso a la Inmortalidad del General José de San Martín\",\n        \"original\": \"17-08\",\n        \"tipo\": \"trasladable\"\n    },\n    {\n        \"dia\": 12,\n        \"id\": \"diversidad\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_del_Respeto_a_la_Diversidad_Cultural_(Argentina)\",\n        \"mes\": 10,\n        \"motivo\": \"Día del Respeto a la Diversidad Cultural\",\n        \"original\": \"12-10\",\n        \"tipo\": \"trasladable\"\n    },\n    {\n        \"dia\": 20,\n        \"id\": \"soberania-nacional\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Soberan%C3%ADa_Nacional\",\n        \"mes\": 11,\n        \"motivo\": \"Día de la Soberanía Nacional\",\n        \"original\": \"20-11\",\n        \"tipo\": \"trasladable\"\n    },\n    {\n        \"dia\": 8,\n        \"id\": \"inmaculada-maria\",\n        \"info\": \"https://es.wikipedia.org/wiki/Inmaculada_Concepci%C3%B3n\",\n        \"mes\": 12,\n        \"motivo\": \"Inmaculada Concepción de María\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 25,\n        \"id\": \"navidad\",\n        \"info\": \"https://es.wikipedia.org/wiki/Navidad\",\n        \"mes\": 12,\n        \"motivo\": \"Navidad\",\n        \"tipo\": \"inamovible\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Prox Feriado - inamovible Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriados",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriados"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2024",
+											"disabled": true
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Proximo Feriado - inamovible",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado/inamovible",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado",
+												"inamovible"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "2024",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 24 Mar 2025 00:21:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "175"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"dia\": 24,\n    \"fecha\": \"Lunes 24 de Marzo\",\n    \"mes\": 3,\n    \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n    \"tipo\": \"inamovible\",\n    \"year\": 2025\n}"
+								}
+							]
+						},
+						{
+							"name": "Prox Feriado - Query Day and Month INAMOBIBLE",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriado/inamovible?day=18&month=6",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriado",
+										"inamovible"
+									],
+									"query": [
+										{
+											"key": "day",
+											"value": "18"
+										},
+										{
+											"key": "month",
+											"value": "6"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Proximo Feriado - Query Day and Month INAMOBIBLE",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado/inamovible?day=18&month=6",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado",
+												"inamovible"
+											],
+											"query": [
+												{
+													"key": "day",
+													"value": "18"
+												},
+												{
+													"key": "month",
+													"value": "6"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Mar 2025 20:26:00 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "168"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"dia\": 20,\n    \"fecha\": \"Viernes 20 de Junio\",\n    \"mes\": 6,\n    \"motivo\": \"Paso a la Inmortalidad del General Manuel Belgrano\",\n    \"tipo\": \"inamovible\",\n    \"year\": 2025\n}"
+								}
+							]
+						},
+						{
+							"name": "Prox Feriado - Query Day and Month INAMOBIBLE Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriado/nolaborable?day=1&month=1",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriado",
+										"nolaborable"
+									],
+									"query": [
+										{
+											"key": "day",
+											"value": "1"
+										},
+										{
+											"key": "month",
+											"value": "1"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Proximo Feriado - Query Day and Month INAMOBIBLE",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado/inamovible?day=18&month=6",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado",
+												"inamovible"
+											],
+											"query": [
+												{
+													"key": "day",
+													"value": "18"
+												},
+												{
+													"key": "month",
+													"value": "6"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Mar 2025 20:26:00 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "168"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"dia\": 20,\n    \"fecha\": \"Viernes 20 de Junio\",\n    \"mes\": 6,\n    \"motivo\": \"Paso a la Inmortalidad del General Manuel Belgrano\",\n    \"tipo\": \"inamovible\",\n    \"year\": 2025\n}"
+								}
+							]
+						},
+						{
+							"name": "Prox Feriado - Query Day",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriado/trasladable?day=18",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriado",
+										"trasladable"
+									],
+									"query": [
+										{
+											"key": "day",
+											"value": "18"
+										},
+										{
+											"key": "month",
+											"value": "6",
+											"disabled": true
+										}
+									]
+								},
+								"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+							},
+							"response": [
+								{
+									"name": "Agregar pelicula",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\",\n    \"genero\": \"Acción\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas"
+											]
+										}
+									},
+									"status": "CREATED",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.9"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 20 Mar 2025 02:41:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "78"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"genero\": \"Acción\",\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Demo Lab1",
+					"item": [
+						{
+							"name": "API Externa Feriados",
+							"item": [
+								{
+									"name": "Feriados GET",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://nolaborables.com.ar/api/v2/feriados/2025?tipo=puente",
+											"protocol": "https",
+											"host": [
+												"nolaborables",
+												"com",
+												"ar"
+											],
+											"path": [
+												"api",
+												"v2",
+												"feriados",
+												"2025"
+											],
+											"query": [
+												{
+													"key": "tipo",
+													"value": "puente"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "http://nolaborables.com.ar/api/v2/feriados/2016?incluir=opcional",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://nolaborables.com.ar/api/v2/feriados/2016?incluir=opcional",
+											"protocol": "https",
+											"host": [
+												"nolaborables",
+												"com",
+												"ar"
+											],
+											"path": [
+												"api",
+												"v2",
+												"feriados",
+												"2016"
+											],
+											"query": [
+												{
+													"key": "incluir",
+													"value": "opcional"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "2025",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://nolaborables.com.ar/api/v2/feriados/2025",
+											"protocol": "https",
+											"host": [
+												"nolaborables",
+												"com",
+												"ar"
+											],
+											"path": [
+												"api",
+												"v2",
+												"feriados",
+												"2025"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "2025",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://nolaborables.com.ar/api/v2/feriados/2025",
+													"protocol": "https",
+													"host": [
+														"nolaborables",
+														"com",
+														"ar"
+													],
+													"path": [
+														"api",
+														"v2",
+														"feriados",
+														"2025"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Date",
+													"value": "Sat, 22 Mar 2025 17:12:34 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2479"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"9af-tnp6PQsi8ku+CKjUEARkABX+PeI\""
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"motivo\": \"Año Nuevo\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/A%C3%B1o_Nuevo\",\n        \"dia\": 1,\n        \"mes\": 1,\n        \"id\": \"año-nuevo\"\n    },\n    {\n        \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_Nacional_de_la_Memoria_por_la_Verdad_y_la_Justicia\",\n        \"dia\": 24,\n        \"mes\": 3,\n        \"id\": \"memoria-verdad-justicia\"\n    },\n    {\n        \"motivo\": \"Día del Veterano y de los Caídos en la Guerra de Malvinas\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_del_Veterano_y_de_los_Ca%C3%ADdos_en_la_Guerra_de_Malvinas\",\n        \"dia\": 2,\n        \"mes\": 4,\n        \"id\": \"veteranos-malvinas\"\n    },\n    {\n        \"motivo\": \"Día del Trabajador\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores\",\n        \"dia\": 1,\n        \"mes\": 5,\n        \"id\": \"trabajador\"\n    },\n    {\n        \"motivo\": \"Día de la Revolución de Mayo\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/Revoluci%C3%B3n_de_Mayo\",\n        \"dia\": 25,\n        \"mes\": 5,\n        \"id\": \"revolucion-mayo\"\n    },\n    {\n        \"motivo\": \"Paso a la Inmortalidad del Gral. Don Martín Güemes\",\n        \"tipo\": \"trasladable\",\n        \"original\": \"17-06\",\n        \"info\": \"https://es.wikipedia.org/wiki/Mart%C3%ADn_Miguel_de_G%C3%BCemes\",\n        \"dia\": 17,\n        \"mes\": 6,\n        \"id\": \"martin-guemes\"\n    },\n    {\n        \"motivo\": \"Paso a la Inmortalidad del General Manuel Belgrano\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Bandera_(Argentina)\",\n        \"dia\": 20,\n        \"mes\": 6,\n        \"id\": \"belgrano\"\n    },\n    {\n        \"motivo\": \"Día de la Independencia\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_independencia_de_la_Argentina\",\n        \"dia\": 9,\n        \"mes\": 7,\n        \"id\": \"independencia\"\n    },\n    {\n        \"motivo\": \"Paso a la Inmortalidad del General José de San Martín\",\n        \"tipo\": \"trasladable\",\n        \"original\": \"17-08\",\n        \"info\": \"https://es.wikipedia.org/wiki/Jos%C3%A9_de_San_Mart%C3%ADn\",\n        \"dia\": 17,\n        \"mes\": 8,\n        \"id\": \"san-martin\"\n    },\n    {\n        \"motivo\": \"Día del Respeto a la Diversidad Cultural\",\n        \"tipo\": \"trasladable\",\n        \"original\": \"12-10\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_del_Respeto_a_la_Diversidad_Cultural_(Argentina)\",\n        \"dia\": 12,\n        \"mes\": 10,\n        \"id\": \"diversidad\"\n    },\n    {\n        \"motivo\": \"Día de la Soberanía Nacional\",\n        \"tipo\": \"trasladable\",\n        \"original\": \"20-11\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Soberan%C3%ADa_Nacional\",\n        \"dia\": 20,\n        \"mes\": 11,\n        \"id\": \"soberania-nacional\"\n    },\n    {\n        \"motivo\": \"Inmaculada Concepción de María\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/Inmaculada_Concepci%C3%B3n\",\n        \"dia\": 8,\n        \"mes\": 12,\n        \"id\": \"inmaculada-maria\"\n    },\n    {\n        \"motivo\": \"Navidad\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/Navidad\",\n        \"dia\": 25,\n        \"mes\": 12,\n        \"id\": \"navidad\"\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "Example inputs",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://nolaborables.com.ar/api/v2/feriados/2025",
+											"protocol": "https",
+											"host": [
+												"nolaborables",
+												"com",
+												"ar"
+											],
+											"path": [
+												"api",
+												"v2",
+												"feriados",
+												"2025"
+											],
+											"query": [
+												{
+													"key": "incluir",
+													"value": "opcional",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "2025",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://nolaborables.com.ar/api/v2/feriados/2025",
+													"protocol": "https",
+													"host": [
+														"nolaborables",
+														"com",
+														"ar"
+													],
+													"path": [
+														"api",
+														"v2",
+														"feriados",
+														"2025"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Date",
+													"value": "Sat, 22 Mar 2025 17:12:34 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2479"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"9af-tnp6PQsi8ku+CKjUEARkABX+PeI\""
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"motivo\": \"Año Nuevo\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/A%C3%B1o_Nuevo\",\n        \"dia\": 1,\n        \"mes\": 1,\n        \"id\": \"año-nuevo\"\n    },\n    {\n        \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_Nacional_de_la_Memoria_por_la_Verdad_y_la_Justicia\",\n        \"dia\": 24,\n        \"mes\": 3,\n        \"id\": \"memoria-verdad-justicia\"\n    },\n    {\n        \"motivo\": \"Día del Veterano y de los Caídos en la Guerra de Malvinas\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_del_Veterano_y_de_los_Ca%C3%ADdos_en_la_Guerra_de_Malvinas\",\n        \"dia\": 2,\n        \"mes\": 4,\n        \"id\": \"veteranos-malvinas\"\n    },\n    {\n        \"motivo\": \"Día del Trabajador\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores\",\n        \"dia\": 1,\n        \"mes\": 5,\n        \"id\": \"trabajador\"\n    },\n    {\n        \"motivo\": \"Día de la Revolución de Mayo\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/Revoluci%C3%B3n_de_Mayo\",\n        \"dia\": 25,\n        \"mes\": 5,\n        \"id\": \"revolucion-mayo\"\n    },\n    {\n        \"motivo\": \"Paso a la Inmortalidad del Gral. Don Martín Güemes\",\n        \"tipo\": \"trasladable\",\n        \"original\": \"17-06\",\n        \"info\": \"https://es.wikipedia.org/wiki/Mart%C3%ADn_Miguel_de_G%C3%BCemes\",\n        \"dia\": 17,\n        \"mes\": 6,\n        \"id\": \"martin-guemes\"\n    },\n    {\n        \"motivo\": \"Paso a la Inmortalidad del General Manuel Belgrano\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Bandera_(Argentina)\",\n        \"dia\": 20,\n        \"mes\": 6,\n        \"id\": \"belgrano\"\n    },\n    {\n        \"motivo\": \"Día de la Independencia\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_independencia_de_la_Argentina\",\n        \"dia\": 9,\n        \"mes\": 7,\n        \"id\": \"independencia\"\n    },\n    {\n        \"motivo\": \"Paso a la Inmortalidad del General José de San Martín\",\n        \"tipo\": \"trasladable\",\n        \"original\": \"17-08\",\n        \"info\": \"https://es.wikipedia.org/wiki/Jos%C3%A9_de_San_Mart%C3%ADn\",\n        \"dia\": 17,\n        \"mes\": 8,\n        \"id\": \"san-martin\"\n    },\n    {\n        \"motivo\": \"Día del Respeto a la Diversidad Cultural\",\n        \"tipo\": \"trasladable\",\n        \"original\": \"12-10\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_del_Respeto_a_la_Diversidad_Cultural_(Argentina)\",\n        \"dia\": 12,\n        \"mes\": 10,\n        \"id\": \"diversidad\"\n    },\n    {\n        \"motivo\": \"Día de la Soberanía Nacional\",\n        \"tipo\": \"trasladable\",\n        \"original\": \"20-11\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Soberan%C3%ADa_Nacional\",\n        \"dia\": 20,\n        \"mes\": 11,\n        \"id\": \"soberania-nacional\"\n    },\n    {\n        \"motivo\": \"Inmaculada Concepción de María\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/Inmaculada_Concepci%C3%B3n\",\n        \"dia\": 8,\n        \"mes\": 12,\n        \"id\": \"inmaculada-maria\"\n    },\n    {\n        \"motivo\": \"Navidad\",\n        \"tipo\": \"inamovible\",\n        \"info\": \"https://es.wikipedia.org/wiki/Navidad\",\n        \"dia\": 25,\n        \"mes\": 12,\n        \"id\": \"navidad\"\n    }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Peliculas",
+							"item": [
+								{
+									"name": "Obtener pelicula Random por Genero",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas/random/drama",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas",
+												"random",
+												"drama"
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "No implementada",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/peliculas/1",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"peliculas",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 20 Mar 2025 02:39:37 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "63"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"response\": \"Esta funcionalidad no esta implementada :(\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Obtener pelicula por Genero",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas?genero=drama",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas"
+											],
+											"query": [
+												{
+													"key": "genero",
+													"value": "drama"
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "No implementada",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/peliculas/1",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"peliculas",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 20 Mar 2025 02:39:37 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "63"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"response\": \"Esta funcionalidad no esta implementada :(\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Obtener pelicula por Genero Copy",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/peliculas?genero=ACCION",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"peliculas"
+											],
+											"query": [
+												{
+													"key": "genero",
+													"value": "ACCION"
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "No implementada",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/peliculas/1",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"peliculas",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 20 Mar 2025 02:39:37 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "63"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"response\": \"Esta funcionalidad no esta implementada :(\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Feriados",
+							"item": [
+								{
+									"name": "Prox Feriado - ALL",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriados",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriados"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "2024",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Proximo Feriado - One Copy",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/feriados",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"feriados"
+													],
+													"query": [
+														{
+															"key": "year",
+															"value": "2024",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 24 Mar 2025 00:28:45 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "3123"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"dia\": 1,\n        \"id\": \"año-nuevo\",\n        \"info\": \"https://es.wikipedia.org/wiki/A%C3%B1o_Nuevo\",\n        \"mes\": 1,\n        \"motivo\": \"Año Nuevo\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 24,\n        \"id\": \"memoria-verdad-justicia\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_Nacional_de_la_Memoria_por_la_Verdad_y_la_Justicia\",\n        \"mes\": 3,\n        \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 2,\n        \"id\": \"veteranos-malvinas\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_del_Veterano_y_de_los_Ca%C3%ADdos_en_la_Guerra_de_Malvinas\",\n        \"mes\": 4,\n        \"motivo\": \"Día del Veterano y de los Caídos en la Guerra de Malvinas\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 1,\n        \"id\": \"trabajador\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores\",\n        \"mes\": 5,\n        \"motivo\": \"Día del Trabajador\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 25,\n        \"id\": \"revolucion-mayo\",\n        \"info\": \"https://es.wikipedia.org/wiki/Revoluci%C3%B3n_de_Mayo\",\n        \"mes\": 5,\n        \"motivo\": \"Día de la Revolución de Mayo\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 17,\n        \"id\": \"martin-guemes\",\n        \"info\": \"https://es.wikipedia.org/wiki/Mart%C3%ADn_Miguel_de_G%C3%BCemes\",\n        \"mes\": 6,\n        \"motivo\": \"Paso a la Inmortalidad del Gral. Don Martín Güemes\",\n        \"original\": \"17-06\",\n        \"tipo\": \"trasladable\"\n    },\n    {\n        \"dia\": 20,\n        \"id\": \"belgrano\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Bandera_(Argentina)\",\n        \"mes\": 6,\n        \"motivo\": \"Paso a la Inmortalidad del General Manuel Belgrano\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 9,\n        \"id\": \"independencia\",\n        \"info\": \"https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_independencia_de_la_Argentina\",\n        \"mes\": 7,\n        \"motivo\": \"Día de la Independencia\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 17,\n        \"id\": \"san-martin\",\n        \"info\": \"https://es.wikipedia.org/wiki/Jos%C3%A9_de_San_Mart%C3%ADn\",\n        \"mes\": 8,\n        \"motivo\": \"Paso a la Inmortalidad del General José de San Martín\",\n        \"original\": \"17-08\",\n        \"tipo\": \"trasladable\"\n    },\n    {\n        \"dia\": 12,\n        \"id\": \"diversidad\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_del_Respeto_a_la_Diversidad_Cultural_(Argentina)\",\n        \"mes\": 10,\n        \"motivo\": \"Día del Respeto a la Diversidad Cultural\",\n        \"original\": \"12-10\",\n        \"tipo\": \"trasladable\"\n    },\n    {\n        \"dia\": 20,\n        \"id\": \"soberania-nacional\",\n        \"info\": \"https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Soberan%C3%ADa_Nacional\",\n        \"mes\": 11,\n        \"motivo\": \"Día de la Soberanía Nacional\",\n        \"original\": \"20-11\",\n        \"tipo\": \"trasladable\"\n    },\n    {\n        \"dia\": 8,\n        \"id\": \"inmaculada-maria\",\n        \"info\": \"https://es.wikipedia.org/wiki/Inmaculada_Concepci%C3%B3n\",\n        \"mes\": 12,\n        \"motivo\": \"Inmaculada Concepción de María\",\n        \"tipo\": \"inamovible\"\n    },\n    {\n        \"dia\": 25,\n        \"id\": \"navidad\",\n        \"info\": \"https://es.wikipedia.org/wiki/Navidad\",\n        \"mes\": 12,\n        \"motivo\": \"Navidad\",\n        \"tipo\": \"inamovible\"\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "Prox Feriado - One",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "2024",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Proximo Feriado - inamovible Copy",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/feriado",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"feriado"
+													],
+													"query": [
+														{
+															"key": "year",
+															"value": "2024",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 24 Mar 2025 00:28:22 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "175"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"dia\": 24,\n    \"fecha\": \"Lunes 24 de Marzo\",\n    \"mes\": 3,\n    \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n    \"tipo\": \"inamovible\",\n    \"year\": 2025\n}"
+										}
+									]
+								},
+								{
+									"name": "Prox Feriado - Sugerir peli",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado_pelicula?type_holiday=inamovible&type_movie=Drama",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado_pelicula"
+											],
+											"query": [
+												{
+													"key": "type_holiday",
+													"value": "inamovible"
+												},
+												{
+													"key": "type_movie",
+													"value": "Drama"
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Prox Feriado - Sugerir peli",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/feriado_pelicula?type_holiday=inamovible&type_movie=Drama",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"feriado_pelicula"
+													],
+													"query": [
+														{
+															"key": "type_holiday",
+															"value": "inamovible"
+														},
+														{
+															"key": "type_movie",
+															"value": "Drama"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.0.1 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 25 Mar 2025 01:20:17 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "426"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"feriado\": {\n        \"año\": 2025,\n        \"dia\": 2,\n        \"fecha\": \"Miércoles 2 de Abril\",\n        \"mes\": 4,\n        \"motivo\": \"Día del Veterano y de los Caídos en la Guerra de Malvinas\",\n        \"tipo\": \"inamovible\"\n    },\n    \"peliculas\": [\n        {\n            \"genero\": \"Drama\",\n            \"id\": 10,\n            \"titulo\": \"The Shawshank Redemption\"\n        },\n        {\n            \"genero\": \"Drama\",\n            \"id\": 12,\n            \"titulo\": \"Fight Club\"\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Prox Feriado - inamovible",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado/inamovible",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado",
+												"inamovible"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "2024",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Proximo Feriado - inamovible",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/feriado/inamovible",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"feriado",
+														"inamovible"
+													],
+													"query": [
+														{
+															"key": "year",
+															"value": "2024",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 24 Mar 2025 00:21:08 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "175"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"dia\": 24,\n    \"fecha\": \"Lunes 24 de Marzo\",\n    \"mes\": 3,\n    \"motivo\": \"Día Nacional de la Memoria por la Verdad y la Justicia\",\n    \"tipo\": \"inamovible\",\n    \"year\": 2025\n}"
+										}
+									]
+								},
+								{
+									"name": "Prox Feriado - puente",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado/puente",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado",
+												"puente"
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Agregar pelicula",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\",\n    \"genero\": \"Acción\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/peliculas",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"peliculas"
+													]
+												}
+											},
+											"status": "CREATED",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 20 Mar 2025 02:41:27 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "78"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"genero\": \"Acción\",\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Prox Feriado - Invalid Type",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado/cat",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado",
+												"cat"
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Agregar pelicula",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\",\n    \"genero\": \"Acción\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/peliculas",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"peliculas"
+													]
+												}
+											},
+											"status": "CREATED",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 20 Mar 2025 02:41:27 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "78"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"genero\": \"Acción\",\n    \"id\": 13,\n    \"titulo\": \"Ejemplo para Postman\"\n}"
+										},
+										{
+											"name": "Proximo Feriado - Invalid Type",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/feriado/cat",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"feriado",
+														"cat"
+													]
+												}
+											},
+											"status": "BAD REQUEST",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.0.1 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 25 Mar 2025 19:32:04 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "82"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"El tipo cat no es valido. Por favor ingrese un tipo válido.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Prox Feriado - nolaborable con fecha",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado/nolaborable?day=1&month=1",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado",
+												"nolaborable"
+											],
+											"query": [
+												{
+													"key": "day",
+													"value": "1"
+												},
+												{
+													"key": "month",
+													"value": "1"
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Proximo Feriado - nolaborable",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/feriado/nolaborable",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"feriado",
+														"nolaborable"
+													]
+												}
+											},
+											"status": "NOT FOUND",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 23 Mar 2025 20:28:40 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "69"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"No se ha encontrado un feriado del tipo solicitado.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Prox Feriado - Sugerir peli Fecha",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado_pelicula?type_holiday=inamovible&type_movie=ACCIÓN&day=18&month=6",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado_pelicula"
+											],
+											"query": [
+												{
+													"key": "type_holiday",
+													"value": "inamovible"
+												},
+												{
+													"key": "type_movie",
+													"value": "ACCIÓN"
+												},
+												{
+													"key": "day",
+													"value": "18"
+												},
+												{
+													"key": "month",
+													"value": "6"
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Prox Feriado - Sugerir peli",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/feriado_pelicula?type_holiday=inamovible&type_movie=Drama",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"feriado_pelicula"
+													],
+													"query": [
+														{
+															"key": "type_holiday",
+															"value": "inamovible"
+														},
+														{
+															"key": "type_movie",
+															"value": "Drama"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.0.1 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 25 Mar 2025 01:20:17 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "426"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"feriado\": {\n        \"año\": 2025,\n        \"dia\": 2,\n        \"fecha\": \"Miércoles 2 de Abril\",\n        \"mes\": 4,\n        \"motivo\": \"Día del Veterano y de los Caídos en la Guerra de Malvinas\",\n        \"tipo\": \"inamovible\"\n    },\n    \"peliculas\": [\n        {\n            \"genero\": \"Drama\",\n            \"id\": 10,\n            \"titulo\": \"The Shawshank Redemption\"\n        },\n        {\n            \"genero\": \"Drama\",\n            \"id\": 12,\n            \"titulo\": \"Fight Club\"\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Prox Feriado - Query Day and Month TRASLADABLE",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{LOCAL_HOST}}/feriado/trasladable?day=18&month=6",
+											"protocol": "http",
+											"host": [
+												"{{LOCAL_HOST}}"
+											],
+											"path": [
+												"feriado",
+												"trasladable"
+											],
+											"query": [
+												{
+													"key": "day",
+													"value": "18"
+												},
+												{
+													"key": "month",
+													"value": "6"
+												}
+											]
+										},
+										"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+									},
+									"response": [
+										{
+											"name": "Proximo Feriado - Query",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://{{LOCAL_HOST}}/feriado/trasladable?day=18&month=6",
+													"protocol": "http",
+													"host": [
+														"{{LOCAL_HOST}}"
+													],
+													"path": [
+														"feriado",
+														"trasladable"
+													],
+													"query": [
+														{
+															"key": "day",
+															"value": "18"
+														},
+														{
+															"key": "month",
+															"value": "6"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Server",
+													"value": "Werkzeug/3.1.3 Python/3.12.9"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 23 Mar 2025 20:25:10 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Content-Length",
+													"value": "183"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"dia\": 17,\n    \"fecha\": \"Domingo 17 de Agosto\",\n    \"mes\": 8,\n    \"motivo\": \"Paso a la Inmortalidad del General José de San Martín\",\n    \"tipo\": \"trasladable\",\n    \"year\": 2025\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Prox Feriado - trasladable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{LOCAL_HOST}}/feriado/trasladable",
+							"protocol": "http",
+							"host": [
+								"{{LOCAL_HOST}}"
+							],
+							"path": [
+								"feriado",
+								"trasladable"
+							]
+						},
+						"description": "Generated from cURL: curl http://localhost:5000/peliculas"
+					},
+					"response": [
+						{
+							"name": "Proximo Feriado - trasladable",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{LOCAL_HOST}}/feriado/trasladable",
+									"protocol": "http",
+									"host": [
+										"{{LOCAL_HOST}}"
+									],
+									"path": [
+										"feriado",
+										"trasladable"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.12.9"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Mar 2025 00:18:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"dia\": 17,\n    \"fecha\": \"Martes 17 de Junio\",\n    \"mes\": 6,\n    \"motivo\": \"Paso a la Inmortalidad del Gral. Don Martín Güemes\",\n    \"tipo\": \"trasladable\",\n    \"year\": 2025\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Nico",
+			"item": []
+		},
+		{
+			"name": "Caro",
+			"item": []
+		},
+		{
+			"name": "Juan",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LOCAL_HOST",
+			"value": "localhost:5000",
+			"type": "string"
+		}
+	]
+}
